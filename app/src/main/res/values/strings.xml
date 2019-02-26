@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Homeworkapp</string>
+    <string name="homework">department</string>
+    <string-array name="departmentlist">
+        <item>MCA</item>
+        <item>MBA</item>
+        <item>BSC</item>
+        <item>BCA</item>
+        <item>BTECH</item>
+        <item>AME</item>
+        <item>MTECH</item>
+    </string-array>
+    <string name="subject">Semester</string>
+    <string-array name="subjectlist">
+        <item>S1</item>
+        <item>S2</item>
+        <item>S3</item>
+        <item>S4</item>
+        <item>S5</item>
+        <item>S6</item>
+
+    </string-array>
+</resources>
