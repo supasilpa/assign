@@ -91,14 +91,14 @@ public class dbhelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
-        cv.put(col2,semester);
-        cv.put(col3,subname);
-        cv.put(col4,duedate);
-        cv.put(col5,tutor);
-        cv.put(col6,topic);
-        cv.put(col7,message);
+        cv.put(col12,semester);
+        cv.put(col13,subname);
+        cv.put(col14,duedate);
+        cv.put(col15,tutor);
+        cv.put(col16,topic);
+        cv.put(col17,message);
 
-        long status=sqLiteDatabase.insert(tablename,null,cv);
+        long status=sqLiteDatabase.insert(tablenamee,null,cv);
         if(status==-1)
         {
             return false;
@@ -114,4 +114,39 @@ public class dbhelper extends SQLiteOpenHelper {
         Cursor cur=sq.rawQuery("SELECT * FROM "+tablenamee+" WHERE "+col13+"='"+name+"'",null);
         return cur;
     }
+//    update
+    public boolean update(String id,String semester,String duedate,String tutor,String topic,String message)
+    {
+        SQLiteDatabase sq=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(col12,semester);
+        cv.put(col14,duedate);
+        cv.put(col15,tutor);
+        cv.put(col16,topic);
+        cv.put(col17,message);
+        long status=sq.update(tablenamee,cv,col11 + "=" +id,null);
+        if (status==-1)
+        {
+            return false;
+
+        }
+    else
+        {
+            return  true;
+
+        }
+    }
+public boolean delete (String id)
+{
+    SQLiteDatabase sq=this.getWritableDatabase();
+    long status=sq.delete(tablenamee,col11 + "=" +id,null);
+    if(status==-1)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 }
