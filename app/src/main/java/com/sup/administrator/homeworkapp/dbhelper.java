@@ -149,4 +149,10 @@ public boolean delete (String id)
         return true;
     }
 }
+    public Cursor getvalues(String username)
+    {
+        SQLiteDatabase sq=this.getWritableDatabase();
+        Cursor cur=sq.rawQuery("SELECT * FROM "+tablename+ " WHERE "+col7+ "='"+username+"'", null);
+        return cur;
+    }
 }

@@ -19,7 +19,9 @@
         <activity android:name=".studentloginActivity" />
         <activity android:name=".assignmentregActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".loginadmin"></activity>
+        <activity android:name=".loginadmin" />
+        <activity android:name=".studhome" />
+        <activity android:name=".studsearch"></activity>
     </application>
 
 </manifest>

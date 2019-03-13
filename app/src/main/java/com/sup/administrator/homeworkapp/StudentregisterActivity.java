@@ -33,6 +33,7 @@ EditText ed1,ed2,ed3,ed4,ed5,ed6;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 s1= ed1.getText().toString();
                 s2=sp.getSelectedItem().toString();
                 s3=ed2.getText().toString();

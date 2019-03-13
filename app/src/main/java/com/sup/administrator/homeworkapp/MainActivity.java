@@ -69,7 +69,7 @@ b3.setOnClickListener(new View.OnClickListener() {
 b2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        Intent i= new Intent(getApplicationContext(),studentloginActivity.class);
+     Intent i= new Intent(getApplicationContext(),studentloginActivity.class);
         startActivity(i);
     }
 });
