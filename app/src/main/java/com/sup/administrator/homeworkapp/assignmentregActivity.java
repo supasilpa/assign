@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class assignmentregActivity extends AppCompatActivity {
 EditText ed1,ed2,ed3,ed4,ed5;
-    Button b1,b2;
+    Button b1,b2,b3;
     Spinner sp;
     String s1,s2,s3,s4,s5,s6;
     dbhelper db;
@@ -27,6 +27,7 @@ EditText ed1,ed2,ed3,ed4,ed5;
         sp=(Spinner) findViewById(R.id.dep);
         b1=(Button)findViewById(R.id.submit);
         b2=(Button)findViewById(R.id.srch);
+        b3=(Button)findViewById(R.id.back);
         db=new dbhelper(this);
         db.getWritableDatabase();
 b2.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +54,13 @@ b2.setOnClickListener(new View.OnClickListener() {
                 else{
                     Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getApplicationContext(),loginadmin.class);
+                startActivity(i);
             }
         });
 

@@ -1,20 +1,38 @@
-<ScrollView android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<LinearLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bgstyle">
+    android:background="@drawable/bgstyle"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <Button
+                android:layout_margin="15dp"
+                android:textColor="#FFFFFF"
+                android:text="SEARCH ASSIGNMENT"
+                android:textSize="20dp"
+                android:id="@+id/searchassig"
+                android:background="@drawable/buttonstyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
     <Button
         android:layout_margin="15dp"
         android:textColor="#FFFFFF"
-        android:text="SEARCH ASSIGNMENT"
+        android:text="PROFILE EDIT"
         android:textSize="20dp"
-        android:id="@+id/searchassig"
+        android:id="@+id/pedit"
+        android:background="@drawable/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_margin="15dp"
+        android:textColor="#FFFFFF"
+        android:text="LOGOUT"
+        android:textSize="20dp"
+        android:id="@+id/plogout"
         android:background="@drawable/buttonstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
-</ScrollView>
+

@@ -10,7 +10,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class StudentregisterActivity extends AppCompatActivity {
-EditText ed1,ed2,ed3,ed4,ed5,ed6;
+    EditText ed1,ed2,ed3,ed4,ed5,ed6;
     Button b1;
     Spinner sp;
     String s1,s2,s3,s4,s5,s6,s7;

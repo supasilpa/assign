@@ -11,11 +11,15 @@
         android:layout_height="wrap_content"
         android:text="Username"
         android:textSize="20dp"/>
+
     <EditText
         android:layout_margin="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/studuname"/>
+
+
+
     <TextView
         android:textSize="20dp"
         android:layout_margin="15dp"
@@ -23,6 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Password"
         />
+
     <EditText
         android:layout_margin="15dp"
         android:layout_width="match_parent"

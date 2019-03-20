@@ -21,7 +21,8 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".loginadmin" />
         <activity android:name=".studhome" />
-        <activity android:name=".studsearch"></activity>
+        <activity android:name=".studsearch" />
+        <activity android:name=".profileedit"></activity>
     </application>
 
 </manifest>

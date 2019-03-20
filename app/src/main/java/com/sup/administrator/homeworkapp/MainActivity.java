@@ -26,7 +26,6 @@ EditText ed1,ed2;
             startActivity(i);
         }
 
-
         ed1=(EditText)findViewById(R.id.uname);
         ed2=(EditText)findViewById(R.id.pass);
         b1=(Button)findViewById(R.id.login);

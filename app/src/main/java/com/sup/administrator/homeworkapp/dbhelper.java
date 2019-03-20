@@ -136,6 +136,42 @@ public class dbhelper extends SQLiteOpenHelper {
 
         }
     }
+
+    //profile srch
+    public Cursor searchid(String id)
+    {
+        SQLiteDatabase sq=this.getWritableDatabase();
+        Cursor cur=sq.rawQuery("SELECT * FROM "+tablename+ " WHERE "+col1+ "="+id,null);
+        return cur;
+    }
+
+
+    //profile update
+    public boolean updatedata(String id,String name,String  department,String rollno,String email,String mobileno,String username,String password){
+        SQLiteDatabase sq=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(col2,name);
+        cv.put(col3,department);
+        cv.put(col4,rollno);
+        cv.put(col5,email);
+        cv.put(col6,mobileno);
+        cv.put(col7,username);
+        cv.put(col8,password);
+
+
+        long status=sq.update(tablename,cv,col1 + "=" +id,null);
+        if(status==-1)
+        {
+            return false;
+
+        }
+        else
+        {
+            return true;
+        }
+
+    }
+
 public boolean delete (String id)
 {
     SQLiteDatabase sq=this.getWritableDatabase();

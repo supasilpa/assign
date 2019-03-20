@@ -1,107 +1,99 @@
 <ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/bgstyle">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/subject"
-            android:textSize="15dp"/>
-        <Spinner
-            android:id="@+id/dep"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/subjectlist" />
+        android:background="@drawable/bgstyle"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
         <TextView
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SUBJECT NAME"
+            android:text="Studentname"
             android:textSize="20dp"/>
         <EditText
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/subname"/>
-
-
+            android:id="@+id/pname"/>
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/homework"-->
+            <!--android:textSize="15dp"/>-->
+        <!--<Spinner-->
+            <!--android:id="@+id/pdep"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:entries="@array/departmentlist" />-->
         <TextView
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Due date"
+            android:text="Rollno"
             android:textSize="20dp"/>
         <EditText
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/duedate"/>
+            android:id="@+id/prno"/>
         <TextView
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tutor"
+            android:text="Email"
             android:textSize="20dp"/>
         <EditText
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tutor"/>
-
+            android:id="@+id/pemail"/>
         <TextView
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Topic"
+            android:text="Mobileno"
             android:textSize="20dp"/>
         <EditText
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/topic"/>
-
+            android:id="@+id/pmob"/>
         <TextView
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Message"
+            android:text="Username"
             android:textSize="20dp"/>
         <EditText
             android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/message"/>
+            android:id="@+id/pusername"/>
+        <TextView
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="20dp"/>
+        <EditText
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ppass"/>
         <Button
             android:layout_margin="15dp"
             android:textColor="#FFFFFF"
             android:text="SUBMIT"
             android:textSize="20dp"
-            android:id="@+id/submit"
-            android:background="@drawable/buttonstyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_margin="15dp"
-            android:textColor="#FFFFFF"
-            android:text="SEARCH"
-            android:textSize="20dp"
-            android:id="@+id/srch"
-            android:background="@drawable/buttonstyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_margin="15dp"
-            android:textColor="#FFFFFF"
-            android:text="BACK"
-            android:textSize="20dp"
-            android:id="@+id/back"
+            android:id="@+id/psubmit"
             android:background="@drawable/buttonstyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    </ScrollView>
+</ScrollView>
