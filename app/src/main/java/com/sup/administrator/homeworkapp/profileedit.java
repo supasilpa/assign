@@ -1,5 +1,6 @@
 package com.sup.administrator.homeworkapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class profileedit extends AppCompatActivity {
-     Button b;
+     Button b,b1;
     EditText ed1,ed2,ed3,ed4,ed5,ed6;
     Spinner sp;
     String getid,s1,s2,s3,s4,s5,s6,s7,ss2;
@@ -27,6 +28,7 @@ public class profileedit extends AppCompatActivity {
         ed5=(EditText)findViewById(R.id.pusername);
         ed6=(EditText)findViewById(R.id.ppass);
         b=(Button)findViewById(R.id.psubmit);
+        b1=(Button)findViewById(R.id.pback);
        // sp=(Spinner)findViewById(R.id.pdep);
 
         //ss2=sp.getSelectedItem().toString();
@@ -91,5 +93,12 @@ b.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent a=new Intent(getApplicationContext(),studhome.class);
+                startActivity(a);
+            }
+        });
     }
 }

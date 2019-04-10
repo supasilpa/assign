@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class studhome extends AppCompatActivity {
- Button b1,b2,b3;
+ Button b1,b2,b3,b4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,7 @@ public class studhome extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.searchassig);
         b2 = (Button) findViewById(R.id.pedit);
         b3 = (Button) findViewById(R.id.plogout);
-
+        b4 = (Button) findViewById(R.id.psm);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +40,13 @@ public class studhome extends AppCompatActivity {
                 ed.apply();
                 Intent a=new Intent(getApplicationContext(),studentloginActivity.class);
                 startActivity(a);
+            }
+        });
+        b4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent e = new Intent(getApplicationContext(), searchmark.class);
+                startActivity(e);
             }
         });
     }

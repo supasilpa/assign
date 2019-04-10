@@ -26,9 +26,19 @@
     <Button
         android:layout_margin="15dp"
         android:textColor="#FFFFFF"
+        android:text="MARK ISSUE"
+        android:textSize="20dp"
+        android:id="@+id/mkissue"
+        android:background="@drawable/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_margin="15dp"
+        android:textColor="#FFFFFF"
         android:text="LOGOUT"
         android:textSize="20dp"
-        android:id="@+id/alogout"
+        android:id="@+id/log"
         android:background="@drawable/buttonstyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

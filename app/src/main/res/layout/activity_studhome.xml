@@ -27,6 +27,15 @@
     <Button
         android:layout_margin="15dp"
         android:textColor="#FFFFFF"
+        android:text="SEARCH MARK"
+        android:textSize="20dp"
+        android:id="@+id/psm"
+        android:background="@drawable/buttonstyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_margin="15dp"
+        android:textColor="#FFFFFF"
         android:text="LOGOUT"
         android:textSize="20dp"
         android:id="@+id/plogout"

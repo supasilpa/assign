@@ -22,7 +22,9 @@
         <activity android:name=".loginadmin" />
         <activity android:name=".studhome" />
         <activity android:name=".studsearch" />
-        <activity android:name=".profileedit"></activity>
+        <activity android:name=".profileedit" />
+        <activity android:name=".markissue" />
+        <activity android:name=".searchmark"></activity>
     </application>
 
 </manifest>

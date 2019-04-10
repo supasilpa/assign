@@ -8,15 +8,15 @@ import android.view.View;
 import android.widget.Button;
 
 public class loginadmin extends AppCompatActivity {
- Button b,b1,b2;
+ Button b,b1,b2,b3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loginadmin);
         b=(Button)findViewById(R.id.assigreg);
         b1=(Button)findViewById(R.id.sea);
-        b2=(Button)findViewById(R.id.alogout);
-
+//        b2=(Button)findViewById(R.id.log) ;
+        b3=(Button)findViewById(R.id.mkissue);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,14 +34,21 @@ public class loginadmin extends AppCompatActivity {
 
             }
         });
-        b2.setOnClickListener(new View.OnClickListener() {
+//        b2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                SharedPreferences.Editor ed=getSharedPreferences("login",MODE_PRIVATE).edit();
+//                ed.clear();
+//                ed.apply();
+//                Intent a=new Intent(getApplicationContext(),MainActivity.class);
+//                startActivity(a);
+//            }
+//        });
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences.Editor ed=getSharedPreferences("login",MODE_PRIVATE).edit();
-                ed.clear();
-                ed.apply();
-                Intent a=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(a);
+                Intent i=new Intent(getApplicationContext(),markissue.class);
+                startActivity(i);
             }
         });
     }

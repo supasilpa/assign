@@ -33,6 +33,13 @@ public class dbhelper extends SQLiteOpenHelper {
 
 
 
+    public static final String table="mark";
+    public static final String col21="id";
+    public static final String col22="studname";
+    public static final String col23="subname";
+    public static final String col24="rollno";
+    public static final String col25="sem";
+    public static final String col26="mark";
 
 
 
@@ -49,6 +56,9 @@ public class dbhelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(query1);
 
 
+        String query2="create table "+table+"("+col21+ " integer primary key autoincrement, " +col22+ " text, " +col23+ " text, " +col24+ " text, " +col25+ " text, " +col26+ " text )";
+        sqLiteDatabase.execSQL(query2);
+
 
 
 
@@ -62,6 +72,11 @@ public class dbhelper extends SQLiteOpenHelper {
 
         String query1="drop table if exists "+tablenamee;
         sqLiteDatabase.execSQL(query1);
+        onCreate(sqLiteDatabase);
+
+
+        String query2="drop table if exists "+table;
+        sqLiteDatabase.execSQL(query2);
         onCreate(sqLiteDatabase);
     }
     //insert
@@ -108,10 +123,38 @@ public class dbhelper extends SQLiteOpenHelper {
             return true;
         }
     }
+    //insertmark
+    public boolean insertmark(String name,String  subject,String rollno,String sem,String mark)
+    {
+        SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(col22,name);
+        cv.put(col23,subject);
+        cv.put(col24,rollno);
+        cv.put(col25,sem);
+        cv.put(col26,mark);
+
+
+        long status=sqLiteDatabase.insert(table,null,cv);
+        if(status==-1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     //search
     public Cursor search(String name){
         SQLiteDatabase sq=this.getWritableDatabase();
         Cursor cur=sq.rawQuery("SELECT * FROM "+tablenamee+" WHERE "+col13+"='"+name+"'",null);
+        return cur;
+    }
+    //searchmark
+    public Cursor searchmark(String rollno){
+        SQLiteDatabase sq=this.getWritableDatabase();
+        Cursor cur=sq.rawQuery("SELECT * FROM "+table+" WHERE "+col24+"='"+rollno+"'",null);
         return cur;
     }
 //    update
